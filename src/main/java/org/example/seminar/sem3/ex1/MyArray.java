@@ -1,4 +1,4 @@
-package seminar.ex2;
+package org.example.seminar.sem3.ex1;
 
 import java.util.Arrays;
 
