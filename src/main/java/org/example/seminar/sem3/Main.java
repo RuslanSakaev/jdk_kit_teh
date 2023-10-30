@@ -1,4 +1,4 @@
-package seminar.ex2;
+package org.example.seminar.sem3;
 
 public class Main {
     /*
@@ -6,7 +6,7 @@ public class Main {
     возможность хранить любые типы данных, иметь методы добавления и удаления элементов.
      */
     public static void main(String[] args) {
-        MyArray<String> array = new MyArray<>();
+        seminar.ex2.MyArray<String> array = new seminar.ex2.MyArray<>();
         array.add("1");
         array.add("2");
         array.add("3");
@@ -17,6 +17,6 @@ public class Main {
         System.out.println();
         System.out.println(array);
 
-        MyArray<Person> array1 = new MyArray<>();
+        seminar.ex2.MyArray<seminar.ex2.Person> array1 = new seminar.ex2.MyArray<>();
     }
 }
