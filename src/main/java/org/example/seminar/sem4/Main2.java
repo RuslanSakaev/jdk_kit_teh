@@ -1,4 +1,4 @@
-package seminar;
+package org.example.seminar.sem4;
 
 import java.util.*;
 
