@@ -3,7 +3,12 @@ package org.example.hw.hw4;
 import java.io.*;
 import java.util.*;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class EmployeeDirectory implements Serializable {
+    private static final Logger logger = Logger.getLogger(EmployeeDirectory.class.getName());
+
     @Serial
     private static final long serialVersionUID = 1L;
     private final List<Employee> employees;
@@ -100,7 +105,8 @@ public class EmployeeDirectory implements Serializable {
             outputStream.writeObject(this);
             System.out.println("Данные успешно сохранены в файл.");
         } catch (IOException e) {
-            e.printStackTrace();
+            // Замените e.printStackTrace() на логирование ошибки
+            logger.log(Level.SEVERE, "Ошибка при сохранении данных", e);
         }
     }
 
@@ -110,7 +116,8 @@ public class EmployeeDirectory implements Serializable {
             System.out.println("Данные успешно загружены из файла.");
             return directory;
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            // Замените e.printStackTrace() на логирование ошибки
+            logger.log(Level.SEVERE, "Ошибка при загрузке данных", e);
             return null;
         }
     }
