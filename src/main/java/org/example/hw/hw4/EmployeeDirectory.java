@@ -4,24 +4,16 @@ import java.io.*;
 import java.util.*;
 
 public class EmployeeDirectory implements Serializable {
-    private List<Employee> employees;
-    private Map<String, String> phoneNumbersByName;
-    private Map<Integer, Employee> employeesByEmployeeId;
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private final List<Employee> employees;
+    private final Map<String, String> phoneNumbersByName;
+    private final Map<Integer, Employee> employeesByEmployeeId;
 
     public EmployeeDirectory() {
         employees = new ArrayList<>();
         phoneNumbersByName = new HashMap<>();
         employeesByEmployeeId = new HashMap<>();
-    }
-
-    public EmployeeDirectory(List<Employee> employees) {
-        this.employees = employees;
-        phoneNumbersByName = new HashMap<>();
-        employeesByEmployeeId = new HashMap<>();
-        for (Employee employee : employees) {
-            phoneNumbersByName.put(employee.name(), employee.phoneNumber());
-            employeesByEmployeeId.put(employee.employeeId(), employee);
-        }
     }
 
     public void addEmployee(int employeeId, String phoneNumber, String name, int experience) {
