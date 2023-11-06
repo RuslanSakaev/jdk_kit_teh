@@ -5,16 +5,25 @@ import java.util.concurrent.locks.ReentrantLock;
 
 class Fork {
     private final Lock lock;
+    private boolean isTaken;
 
     public Fork() {
         lock = new ReentrantLock();
+        isTaken = false;
     }
 
     public boolean pickUp() {
-        return lock.tryLock(); // Попытаться заблокировать вилку и вернуть true, если успешно
+        if (!isTaken && lock.tryLock()) {
+            isTaken = true;
+            return true;
+        }
+        return false;
     }
 
     public void putDown() {
-        lock.unlock(); // Разблокировать вилку
+        if (isTaken) {
+            lock.unlock();
+            isTaken = false;
+        }
     }
 }
