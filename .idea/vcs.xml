@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
-<<<<<<< HEAD
-=======
-    <mapping directory="$PROJECT_DIR$/mav_proj/jdk" vcs="Git" />
->>>>>>> 327cdcd (Добавил проект Gradle с решением задачи к 6 семинару)
+    <mapping directory="" vcs="Git" />
   </component>
 </project>
