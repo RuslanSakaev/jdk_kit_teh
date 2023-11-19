@@ -3,7 +3,7 @@ package org.example.hw.hw5;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-class Fork {
+public class Fork {
     private final Lock lock;
     private boolean isTaken;
 

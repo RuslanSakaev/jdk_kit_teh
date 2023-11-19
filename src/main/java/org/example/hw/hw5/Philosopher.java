@@ -1,7 +1,7 @@
 package org.example.hw.hw5;
 
 
-class Philosopher implements Runnable {
+public class Philosopher implements Runnable {
     private final int id;
     private final Fork leftFork;
     private final Fork rightFork;
