@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
+=======
+    <mapping directory="$PROJECT_DIR$/mav_proj/jdk" vcs="Git" />
+>>>>>>> 327cdcd (Добавил проект Gradle с решением задачи к 6 семинару)
   </component>
 </project>
